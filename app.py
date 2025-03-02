@@ -109,6 +109,9 @@ async def download_file(filename: str):
     return HTMLResponse("<h3>File not found!</h3>")
 
 # ✅ Main entry point - Ensure Render detects port
+import os
+import uvicorn
+
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8000))
-    uvicorn.run(app, host="0.0.0.0", port=port)
+    uvicorn.run("main:app", host="0.0.0.0", port=port, reload=True)
