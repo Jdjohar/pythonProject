@@ -2,3 +2,4 @@ torch
 TTS
 fastapi
 uvicorn
+python-multipart
