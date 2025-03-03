@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: fastapi-tts
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn app:app --host 0.0.0.0 --port $PORT"
+    plan: free
+    envVars:
+      - key: COQUI_TOS_AGREED
+        value: "1"
+      - key: TORCH_LOAD_WEIGHTS_ONLY
+        value: "0"
