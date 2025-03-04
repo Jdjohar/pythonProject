@@ -10,3 +10,4 @@ torch
 starlette
 numpy
 python-multipart
+gunicorn
